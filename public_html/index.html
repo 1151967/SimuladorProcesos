@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operating System-UFPS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+
+        <img src="img/sello.png" alt="Logo" width="300" height="100">
+
+        <a class="navbar-brand" href="#">Operating Systems course</a>
+
+
+    </nav>
+    <br /><br /><br /><br />
+
+    <div class="container text-center">
+        <h1 class="display-4">Process Simulator</h1>
+        <p class="lead">Enter the process data by clicking on the add button to register additional processes.</p>
+
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12">
+                <h2 class="mb-4">Process Information</h2>
+                <div class="table-container">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Label</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-bold">I</td>
+                                <td>I/O Statement</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">F</td>
+                                <td>Finish Task</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">T</td>
+                                <td>Time-out</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12" id="inputContainer">
+                <p>From the previous labels, write the process information string. Each line is identified by a
+                    sequential number.</p>
+                <input type="text" id="processInput" class="form-control mb-2" placeholder="1, 2, 3, I, T...">
+                <button onclick="addProcess()" class="btn btn-primary">Add Information Process</button>
+                <p class="mt-2">Memory-loaded processes:</p>
+                <p id="size"></p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h2 class="mt-4">Process Table</h2>
+                <button onclick="showR()" class="btn btn-primary">Show</button>
+                <table id="OutsTable" class="table table-bordered mt-2">
+                    <thead>
+                        <tr>
+                            <th>Process ID</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <hr>
+                <h2>Read Data Dispatcher Cycles and Cycles Interrupts</h2>
+                <div id="result"></div>
+                <hr>
+                <button onclick="readAndDisplayData()" class="btn btn-primary">Enter Data</button>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h2 class="mt-4">Dispatcher Process (Process States for the Trace)</h2>
+                <button onclick="dispatcher()" class="btn btn-primary">Dispatcher Run</button>
+                <p id="outDistpatcher"></p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h2 class="mt-4">Process States Legend</h2>
+                <table class="table table-bordered mt-2">
+                    <thead>
+                        <tr>
+                            <th>Color</th>
+                            <th>State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="green" style="background-color: green; color: black;">Green</td>
+                            <td>Running</td>
+                        </tr>
+                        <tr>
+                            <td class="grey" style="background-color: gray; color: black;">Grey</td>
+                            <td>Ready</td>
+                        </tr>
+                        <tr>
+                            <td class="red" style="background-color: red; color: black;">Red</td>
+                            <td>Block</td>
+                        </tr>
+                        <tr>
+                            <td class="yellow" style="background-color: yellow; color: black;">Yellow</td>
+                            <td>Finish</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="table-container2"></div>
+          <hr>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
